@@ -69,9 +69,9 @@
         .btn-primary { background: var(--secondary); color: white; }
         .btn-large { padding: 1rem 2rem; font-size: 1.05rem; margin-top: 1.5rem; width: 100%; justify-content: center; }
 
-        /* HERO: SOLO IMAGEN, SIN FONDO AZUL */
+        /* HERO: IMAGEN + FONDO OSCURO LIGERO */
         .hero { 
-            background-image: url('https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Entreprise-de-Renovation-a-Maroc.webp');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.5)), url('https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Entreprise-de-Renovation-a-Maroc.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -338,7 +338,7 @@
                 </button>
                 <div class="lang-dropdown" id="langDropdown" role="menu">
                     <div class="lang-option active" data-lang="fr" role="menuitem">🇫🇷 Français</div>
-                    <div class="lang-option" data-lang="es" role="menuitem">🇪 Español</div>
+                    <div class="lang-option" data-lang="es" role="menuitem">🇪🇸 Español</div>
                     <div class="lang-option" data-lang="ar" role="menuitem">🇲🇦 العربية</div>
                 </div>
             </div>
@@ -1051,7 +1051,7 @@
     }
 
     function setLang(lang) {
-        const flagMap = { fr: '🇫🇷', es: '🇪', ar: '🇦' };
+        const flagMap = { fr: '🇫🇷', es: '🇪🇸', ar: '🇲🇦' };
         const flag = flagMap[lang] || '🇫🇷';
         ['currentFlag', 'mobileCurrentFlag'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = flag; });
         ['currentLang', 'mobileCurrentLang'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = lang.toUpperCase(); });
@@ -1090,7 +1090,7 @@
 
     if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
         const swCode = `
-            const CACHE_NAME = 'reno-experts-v13';
+            const CACHE_NAME = 'reno-experts-v14';
             self.addEventListener('install', e => e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(['./', './index.html'])).then(() => self.skipWaiting())));
             self.addEventListener('activate', e => e.waitUntil(caches.keys().then(names => Promise.all(names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n)))).then(() => self.clients.claim())));
             self.addEventListener('fetch', e => {
