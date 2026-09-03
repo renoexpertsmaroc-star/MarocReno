@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Reno Experts">
     <title>Reno Experts Maroc - Rénovation Professionnelle</title>
-    <meta name="description" content="Reno Experts Maroc : artisans qualifiés pour création de terrasses, isolation, piscines, cuisines, salles de bains, carrelage, parquet. Devis gratuit.">
+    <meta name="description" content="Reno Experts Maroc : artisans qualifiés pour création de terrasses, isolation, piscines, cuisines, salles de bains, carrelage, parquet, aluminium. Devis gratuit.">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Reno Experts Maroc">
@@ -47,7 +47,6 @@
         .dropdown-menu a { display: block; padding: 0.7rem 1.2rem; color: var(--dark); text-decoration: none; font-size: 0.9rem; transition: all 0.2s; border-left: 3px solid transparent; }
         .dropdown-menu a:hover { background: #f1f5f9; color: var(--secondary); border-left-color: var(--secondary); padding-left: 1.5rem; }
 
-        /* FIX #2: Ocultar elementos móviles en escritorio */
         .mobile-menu-header, .mobile-menu-actions, .mobile-lang-selector { display: none; }
         .mobile-menu-body { padding: 0; }
 
@@ -70,11 +69,25 @@
         .btn-primary { background: var(--secondary); color: white; }
         .btn-large { padding: 1rem 2rem; font-size: 1.05rem; margin-top: 1.5rem; width: 100%; justify-content: center; }
 
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%); color: white; padding: 8rem 1.5rem; text-align: center; min-height: 80vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 50%, rgba(249,115,22,0.15) 0%, transparent 50%); pointer-events: none; }
+        /* HERO: SOLO IMAGEN, SIN FONDO AZUL */
+        .hero { 
+            background-image: url('https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Entreprise-de-Renovation-a-Maroc.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; 
+            padding: 8rem 1.5rem; 
+            text-align: center; 
+            min-height: 80vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            position: relative; 
+            overflow: hidden; 
+        }
         .hero-content { position: relative; z-index: 1; max-width: 900px; }
-        .hero-content h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; line-height: 1.2; font-weight: 700; }
-        .hero-content p { font-size: clamp(1rem, 2vw, 1.25rem); margin-bottom: 2.5rem; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 1.5rem; line-height: 1.2; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
+        .hero-content p { font-size: clamp(1rem, 2vw, 1.25rem); margin-bottom: 2.5rem; opacity: 0.98; max-width: 700px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .hero-buttons .btn { flex: 0 1 auto; min-width: 200px; }
 
@@ -186,7 +199,6 @@
         .offline-banner.show { display: block; }
         .mobile-menu-btn { display: none; background: none; border: none; font-size: 1.75rem; cursor: pointer; color: var(--primary); padding: 0.5rem; line-height: 1; }
 
-        /* FIX #3/#5: Overlay global con z-index correcto (debajo del header) */
         .menu-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; opacity: 0; transition: opacity 0.3s ease; }
         .menu-overlay.active { display: block; opacity: 1; }
 
@@ -311,14 +323,13 @@
                         <span>▼</span>
                     </button>
                     <div class="lang-dropdown" id="mobileLangDropdown" role="menu">
-                        <div class="lang-option active" data-lang="fr" role="menuitem">🇫 Français</div>
-                        <div class="lang-option" data-lang="es" role="menuitem">🇪 Español</div>
+                        <div class="lang-option active" data-lang="fr" role="menuitem">🇫🇷 Français</div>
+                        <div class="lang-option" data-lang="es" role="menuitem">🇪🇸 Español</div>
                         <div class="lang-option" data-lang="ar" role="menuitem">🇲🇦 العربية</div>
                     </div>
                 </div>
             </nav>
 
-            <!-- FIX #1: Selector de idioma de escritorio restaurado -->
             <div class="lang-selector">
                 <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
                     <span id="currentFlag">🇫🇷</span>
@@ -332,7 +343,6 @@
                 </div>
             </div>
 
-            <!-- Desktop: solo WhatsApp (Appeler eliminado) -->
             <div class="header-actions">
                 <a href="https://wa.seo-local.click/es/whatsapp-business-directory/02f99a39-9baf-48d9-ae2c-6d0e3d32510d" target="_blank" rel="noopener" class="btn btn-whatsapp">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -346,7 +356,7 @@
 
     <section class="hero">
         <div class="container hero-content">
-            <h1 data-i18n="hero_title">Transformez votre espace avec Reno Experts Maroc</h1>
+            <h1 data-i18n="hero_title">Rénovation au Maroc</h1>
             <p data-i18n="hero_desc">Artisans qualifiés à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Qualité supérieure, matériaux durables et devis gratuit.</p>
             <div class="hero-buttons">
                 <a href="#exterieure" class="btn btn-primary" data-i18n="hero_btn1">Découvrir nos services</a>
@@ -391,7 +401,7 @@
                             <path d="M20 40V30H28V40" stroke="#0a0e1a" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 data-i18n="footer_brand_title">Entreprise de Rénovation à Maroc</h3>
+                    <h3 data-i18n="footer_brand_title">Entreprise de Rénovation au Maroc</h3>
                     <p data-i18n="footer_brand_desc">Votre partenaire de confiance pour tous vos projets de rénovation au Maroc.</p>
                 </div>
                 <div class="footer-col">
@@ -413,7 +423,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div data-i18n="footer_copy">© 2026 Entreprise de Rénovation à Maroc.</div>
+                <div data-i18n="footer_copy">© 2026 Entreprise de Rénovation au Maroc.</div>
                 <div class="footer-legal-links">
                     <button onclick="openLegalModal('mentions')" data-i18n="legal_mentions">Mentions légales</button>
                     <span>·</span>
@@ -474,14 +484,14 @@
         fr: {
             nav_ext: "Rénovation Extérieure", nav_int: "Rénovation Intérieure", nav_autres: "Autres Services", nav_materiaux: "Matériaux",
             btn_devis: "Devis Gratuit", btn_call: "Appeler", menu_title: "Menu",
-            hero_title: "Transformez votre espace avec Reno Experts Maroc",
+            hero_title: "Rénovation au Maroc",
             hero_desc: "Artisans qualifiés à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Qualité supérieure, matériaux durables et devis gratuit.",
             hero_btn1: "Découvrir nos services", hero_btn2: "Devis WhatsApp",
             reviews_title: "Ce que disent nos clients",
-            footer_brand_title: "Entreprise de Rénovation à Maroc",
+            footer_brand_title: "Entreprise de Rénovation au Maroc",
             footer_brand_desc: "Votre partenaire de confiance pour tous vos projets de rénovation au Maroc.",
             footer_contact: "Contact", footer_location: "Maroc", footer_hours: "Lun-Sam: 8h-18h",
-            footer_copy: "© 2026 Entreprise de Rénovation à Maroc.",
+            footer_copy: "© 2026 Entreprise de Rénovation au Maroc.",
             legal_mentions: "Mentions légales", legal_privacy: "Politique de confidentialité",
             modal_cta: "Demander un devis gratuit",
             chat_title: "Assistant Reno Experts", chat_reset: "Réinitialiser",
@@ -508,7 +518,7 @@
         es: {
             nav_ext: "Renovación Exterior", nav_int: "Renovación Interior", nav_autres: "Otros Servicios", nav_materiaux: "Materiales",
             btn_devis: "Presupuesto Gratis", btn_call: "Llamar", menu_title: "Menú",
-            hero_title: "Transforma tu espacio con Reno Experts Maroc",
+            hero_title: "Renovación en Marruecos",
             hero_desc: "Artesanos cualificados en Tetuán, Tánger, Casablanca, Marrakech y Rabat. Calidad superior, materiales duraderos y presupuesto gratuito.",
             hero_btn1: "Descubrir servicios", hero_btn2: "Presupuesto WhatsApp",
             reviews_title: "Lo que dicen nuestros clientes",
@@ -542,7 +552,7 @@
         ar: {
             nav_ext: "تجديد خارجي", nav_int: "تجديد داخلي", nav_autres: "خدمات أخرى", nav_materiaux: "مواد",
             btn_devis: "عرض أسعار مجاني", btn_call: "اتصل", menu_title: "القائمة",
-            hero_title: "حوّل مساحتك مع رينو إكسبرتس المغرب",
+            hero_title: "التجديد في المغرب",
             hero_desc: "حرفيون مؤهلون في تطوان، طنجة، الدار البيضاء، مراكش والرباط. جودة عالية، مواد متينة وعرض أسعار مجاني.",
             hero_btn1: "اكتشف خدماتنا", hero_btn2: "واتساب",
             reviews_title: "ماذا يقول عملاؤنا",
@@ -592,10 +602,15 @@
             cloisons: "Pose de Cloisons et Faux Plafonds au Maroc. Optimisez l'aménagement de vos espaces intérieurs avec nos solutions de cloisons amovibles, faux plafonds suspendus, niches décoratives et isolation phonique. Pose rapide, propre et finitions soignées par nos artisans qualifiés. Intervention professionnelle à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Étude personnalisée de votre projet, matériaux de qualité et respect des délais. Demandez votre devis gratuit dès aujourd'hui pour transformer et optimiser vos espaces de vie ou professionnels avec nos experts.",
             platre: "Travaux Plâtre au Maroc. Enduits muraux lisses et décoratifs, faux plafonds suspendus, moulures et corniches, réparation de fissures, isolation thermique et phonique. Finitions impeccables et durables par nos artisans plâtriers qualifiés et expérimentés. Matériaux de qualité supérieure et techniques modernes. Intervention rapide et soignée à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Conseils d'experts pour embellir vos intérieurs avec élégance. Demandez votre devis gratuit et sans engagement dès aujourd'hui pour transformer vos espaces de vie avec nos artisans.",
             menuiserie: "Travaux de Menuiserie au Maroc. Portes, fenêtres, placards, escaliers et meubles sur mesure réalisés par nos artisans menuisiers qualifiés. Travail du bois, aluminium et PVC avec des finitions impeccables et des matériaux de qualité supérieure. Création, installation et réparation de menuiseries intérieures et extérieures. Intervention rapide et soignée à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Devis gratuit, conseils personnalisés et garantie sur tous nos travaux. Demandez votre devis gratuit dès aujourd'hui pour concrétiser votre projet de menuiserie avec nos experts et votre budget.",
+            aluminium: "Travaux Aluminium au Maroc. Fabrication et installation de menuiseries aluminium sur mesure : fenêtres, portes, baies vitrées, vérandas, garde-corps, façades de magasins et cuisines équipées. Profils de haute qualité avec rupture de pont thermique, double vitrage et quincaillerie durable. Esthétique moderne, résistance aux intempéries et entretien facile. Intervention rapide et soignée à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Devis gratuit et garantie sur tous nos travaux aluminium.",
             peinture: "Rénovation de Peinture et Décoration au Maroc. Transformez vos espaces avec nos services de peinture intérieure et extérieure, papiers peints design, moulures décoratives et effets spéciaux. Harmonisation des couleurs, finitions impeccables et matériaux de qualité premium. Artisans peintres qualifiés et expérimentés. Intervention rapide et soignée à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Demandez votre devis gratuit et sans engagement dès aujourd'hui pour embellir votre maison ou appartement avec des finitions élégantes, durables et parfaitement adaptées à votre style.",
-            fenetres: "Installation professionnelle de portes intérieures et extérieures. Matériaux nobles, sécurité optimale et design sur mesure pour un résultat esthétique et fonctionnel adapté à vos besoins. Installation de fenêtres isolantes en PVC, bois ou aluminium. Optimisez la performance énergétique de votre maison tout en améliorant le confort et l'esthétique de vos espaces.",
+            fenetres: "Installation professionnelle de portes intérieures et extérieures au Maroc. Matériaux nobles, sécurité optimale et design sur mesure pour un résultat esthétique et fonctionnel adapté à vos besoins. Installation de fenêtres isolantes en PVC, bois ou aluminium. Optimisez la performance énergétique de votre maison tout en améliorant le confort et l'esthétique de vos espaces.",
             nettoyage: "Nettoyage de Fin de Chantier au Maroc. Remise en état complète de votre espace après travaux : nettoyage profond des sols, lavage des vitres, désinfection des sanitaires et évacuation des déchets. Équipe équipée, assurée et expérimentée pour un résultat impeccable. Intervention rapide et soignée à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Service professionnel, ponctualité garantie et satisfaction assurée. Demandez votre devis gratuit et sans engagement dès aujourd'hui pour retrouver un espace propre, sain et prêt à vivre après vos travaux de rénovation avec nos professionnels.",
-            materiaux: "Matériaux de Rénovation de Qualité Professionnelle au Maroc – Découvrez notre large sélection de matériaux premium pour tous vos travaux : carrelage, parquet, peinture, isolation, menuiserie et plus. Prix compétitifs, livraison rapide partout au Maroc (Tetouan, Tanger, Casablanca, Rabat, Marrakech). Conseil d'experts gratuit pour choisir les meilleurs matériaux adaptés à votre projet."
+            materiaux: "Matériaux de Rénovation de Qualité Professionnelle au Maroc – Découvrez notre large sélection de matériaux premium pour tous vos travaux : carrelage, parquet, peinture, isolation, menuiserie et plus. Prix compétitifs, livraison rapide partout au Maroc (Tetouan, Tanger, Casablanca, Rabat, Marrakech). Conseil d'experts gratuit pour choisir les meilleurs matériaux adaptés à votre projet.",
+            granit: "Granit de Qualité Premium au Maroc. Large gamme de granit naturel pour plans de travail, escaliers, sols et revêtements extérieurs. Résistance exceptionnelle aux rayures, à la chaleur et aux taches. Disponible en plusieurs couleurs : brun, bleu, blanc, gris, vert, rouge, rose, noir et jaune. Idéal pour cuisines, salles de bains et aménagements extérieurs. Finitions polies, adoucies ou flammées selon vos besoins.",
+            marbre_materiaux: "Marbre Naturel d'Exception au Maroc. Sélection premium de marbre pour sols, murs, plans de travail, escaliers et éléments décoratifs. Élégance intemporelle et durabilité supérieure. Disponible en gris, crème, brun, rouge, rose, noir et jaune. Chaque pièce est unique avec ses veines naturelles caractéristiques. Parfait pour intérieurs luxueux et extérieurs raffinés.",
+            aluminium_materiaux: "Aluminium au Maroc. Profils et menuiseries aluminium de qualité professionnelle pour fenêtres, portes, baies vitrées, vérandas, garde-corps et façades. Large choix de couleurs, finitions anodisées ou thermolaquées et accessoires de haute qualité. Résistance à la corrosion et longévité exceptionnelle. Livraison rapide partout au Maroc et conseil d'experts pour vos projets.",
+            peinture_materiaux: "Peintures Professionnelles au Maroc. Large gamme de peintures intérieures et extérieures de qualité supérieure. Peintures acryliques, glycérophtaliques, époxy et décoratives. Résistance aux intempéries, lavables et écologiques. Disponible en milliers de teintes avec finitions mates, satinées ou brillantes. Conseils d'experts pour choisir la peinture adaptée à votre projet."
         },
         es: {
             terrasse: "Creación de Terrazas a Medida en Marruecos. Transforme su exterior en un espacio de vida elegante, cómodo y funcional con nuestros artesanos cualificados. Madera compuesta, hormigón decorativo o azulejos de alta gama. Intervención rápida en Tetuán, Tánger, Casablanca, Marrakech y Rabat. Materiales duraderos, acabados impecables y garantía de calidad superior. Solicite su presupuesto gratuito y sin compromiso hoy mismo.",
@@ -613,10 +628,15 @@
             cloisons: "Tabiques y Techos Falsos en Marruecos. Tabiques móviles, techos falsos suspendidos, nichos decorativos y aislamiento acústico. Colocación rápida, limpia y acabados cuidados. Intervención profesional en Tetuán, Tánger, Casablanca, Marrakech y Rabat.",
             platre: "Trabajos de Yeso en Marruecos. Enlucidos lisos y decorativos, techos falsos, molduras, cornisas y reparación de grietas. Acabados duraderos por nuestros yeseros cualificados. Intervención rápida en Tetuán, Tánger, Casablanca, Marrakech y Rabat.",
             menuiserie: "Carpintería en Marruecos. Puertas, ventanas, armarios, escaleras y muebles a medida en madera, aluminio y PVC. Creación, instalación y reparación con acabados impecables. Intervención rápida en Tetuán, Tánger, Casablanca, Marrakech y Rabat. Presupuesto gratuito y garantía.",
+            aluminium: "Trabajos de Aluminio en Marruecos. Fabricación e instalación de carpintería de aluminio a medida: ventanas, puertas, ventanales, verandas, barandillas, fachadas de tiendas y cocinas equipadas. Perfiles de alta calidad con rotura de puente térmico, doble acristalamiento y herrajes duraderos. Estética moderna, resistencia a la intemperie y fácil mantenimiento. Intervención rápida en Tetuán, Tánger, Casablanca, Marrakech y Rabat. Presupuesto gratuito y garantía en todos nuestros trabajos de aluminio.",
             peinture: "Pintura y Decoración en Marruecos. Pintura interior y exterior, papeles pintados de diseño, molduras y efectos especiales. Armonización de colores y materiales premium. Intervención rápida en Tetuán, Tánger, Casablanca, Marrakech y Rabat.",
-            fenetres: "Instalación profesional de puertas y ventanas aislantes de PVC, madera o aluminio. Materiales nobles, seguridad óptima y diseño a medida. Optimice el rendimiento energético y el confort de su hogar.",
+            fenetres: "Instalación profesional de puertas y ventanas aislantes de PVC, madera o aluminio en Marruecos. Materiales nobles, seguridad óptima y diseño a medida. Optimice el rendimiento energético y el confort de su hogar.",
             nettoyage: "Limpieza Fin de Obra en Marruecos. Limpieza profunda de suelos, lavado de ventanas, desinfección de sanitarios y evacuación de residuos. Equipo asegurado y experimentado. Intervención rápida en Tetuán, Tánger, Casablanca, Marrakech y Rabat.",
-            materiaux: "Materiales de Renovación de Calidad Profesional en Marruecos. Amplia selección de materiales premium: azulejos, parquet, pintura, aislamiento, carpintería. Precios competitivos y entrega rápida en todo Marruecos (Tetuán, Tánger, Casablanca, Rabat, Marrakech)."
+            materiaux: "Materiales de Renovación de Calidad Profesional en Marruecos. Amplia selección de materiales premium: azulejos, parquet, pintura, aislamiento, carpintería. Precios competitivos y entrega rápida en todo Marruecos (Tetuán, Tánger, Casablanca, Rabat, Marrakech).",
+            granit: "Granito de Calidad Premium en Marruecos. Amplia gama de granito natural para encimeras, escaleras, suelos y revestimientos exteriores. Resistencia excepcional a rayaduras, calor y manchas. Disponible en varios colores: marrón, azul, blanco, gris, verde, rojo, rosa, negro y amarillo. Ideal para cocinas, baños y exteriores. Acabados pulidos, apomazados o flameados según sus necesidades.",
+            marbre_materiaux: "Mármol Natural de Excepción en Marruecos. Selección premium de mármol para suelos, paredes, encimeras, escaleras y elementos decorativos. Elegancia atemporal y durabilidad superior. Disponible en gris, crema, marrón, rojo, rosa, negro y amarillo. Cada pieza es única con sus vetas naturales características. Perfecto para interiores lujosos y exteriores refinados.",
+            aluminium_materiaux: "Aluminio en Marruecos. Perfiles y carpintería de aluminio de calidad profesional para ventanas, puertas, ventanales, verandas, barandillas y fachadas. Amplia gama de colores, acabados anodizados o termolacados y accesorios de alta calidad. Resistencia a la corrosión y durabilidad excepcional. Entrega rápida en todo Marruecos y asesoramiento de expertos para sus proyectos.",
+            peinture_materiaux: "Pinturas Profesionales en Marruecos. Amplia gama de pinturas interiores y exteriores de calidad superior. Pinturas acrílicas, gliceroftálicas, epoxi y decorativas. Resistencia a la intemperie, lavables y ecológicas. Disponible en miles de tonos con acabados mate, satinado o brillante. Consejos de expertos para elegir la pintura adaptada a su proyecto."
         },
         ar: {
             terrasse: "إنشاء تراسات مخصصة في المغرب. حول مساحتك الخارجية إلى مساحة أنيقة ومريحة وعملية مع حرفيينا المؤهلين. خشب مركب، خرسانة زخرفية أو بلاط عالي الجودة. تدخل سريع في تطوان، طنجة، الدار البيضاء، مراكش والرباط. مواد متينة وتشطيبات دقيقة وضمان جودة عالية.",
@@ -634,17 +654,22 @@
             cloisons: "جدران وأسقف مستعارة في المغرب. جدران متحركة، أسقف مستعارة معلقة، تجاويف زخرفية وعزل صوتي. تركيب سريع ونظيف وتشطيبات دقيقة. تدخل احترافي في تطوان، طنجة، الدار البيضاء، مراكش والرباط.",
             platre: "أعمال الجص في المغرب. طلاء سلس وزخرفي، أسقف مستعارة، قوالب، أفاريز وإصلاح الشقوق. تشطيبات متينة من قبل جصصينا المؤهلين. تدخل سريع في تطوان، طنجة، الدار البيضاء، مراكش والرباط.",
             menuiserie: "نجارة في المغرب. أبواب، نوافذ، خزائن، سلالم وأثاث مخصص من الخشب، الألومنيوم وPVC. إنشاء، تركيب وإصلاح بتشطيبات دقيقة. تدخل سريع في تطوان، طنجة، الدار البيضاء، مراكش والرباط. عرض أسعار مجاني وضمان.",
+            aluminium: "أشغال الألومنيوم في المغرب. تصنيع وتركيب نجارة الألومنيوم حسب الطلب: نوافذ، أبواب، واجهات زجاجية، شرفات مغلقة، درابزين، واجهات محلات ومطابخ مجهزة. مقاطع عالية الجودة مع قطع الجسر الحراري، زجاج مزدوج وإكسسوارات متينة. جمالية عصرية، مقاومة للعوامل الجوية وسهولة الصيانة. تدخل سريع في تطوان، طنجة، الدار البيضاء، مراكش والرباط. عرض أسعار مجاني وضمان على جميع أعمال الألومنيوم.",
             peinture: "دهان وديكور في المغرب. دهان داخلي وخارجي، ورق جدران تصميم، قوالب وتأثيرات خاصة. تناغم الألوان ومواد متميزة. تدخل سريع في تطوان، طنجة، الدار البيضاء، مراكش والرباط.",
-            fenetres: "تركيب احترافي لأبواب ونوافذ عازلة من PVC، خشب أو ألومنيوم. مواد نبيلة، أمان مثالي وتصميم مخصص. حسن الأداء الطاقة وراحة منزلك.",
+            fenetres: "تركيب احترافي لأبواب ونوافذ عازلة من PVC، خشب أو ألومنيوم في المغرب. مواد نبيلة، أمان مثالي وتصميم مخصص. حسن الأداء الطاقة وراحة منزلك.",
             nettoyage: "تنظيف نهاية الأشغال في المغرب. تنظيف عميق للأرضيات، غسل النوافذ، تعقيم المراحيض وإخلاء النفايات. فريق مؤمن وذو خبرة. تدخل سريع في تطوان، طنجة، الدار البيضاء، مراكش والرباط.",
-            materiaux: "مواد تجديد بجودة احترافية في المغرب. تشكيلة واسعة من المواد المتميزة: بلاط، باركيه، دهان، عزل، نجارة. أسعار تنافسية وتوصيل سريع في جميع أنحاء المغرب (تطوان، طنجة، الدار البيضاء، الرباط، مراكش)."
+            materiaux: "مواد تجديد بجودة احترافية في المغرب. تشكيلة واسعة من المواد المتميزة: بلاط، باركيه، دهان، عزل، نجارة. أسعار تنافسية وتوصيل سريع في جميع أنحاء المغرب (تطوان، طنجة، الدار البيضاء، الرباط، مراكش).",
+            granit: "جرانيت بجودة متميزة في المغرب. مجموعة واسعة من الجرانيت الطبيعي لطاولات العمل، السلالم، الأرضيات والكسوات الخارجية. مقاومة استثنائية للخدوش، الحرارة والبقع. متوفر بعدة ألوان: بني، أزرق، أبيض، رمادي، أخضر، أحمر، وردي، أسود وأصفر. مثالي للمطابخ، الحمامات والخارج. تشطيبات مصقولة أو ناعمة أو ملتهبة حسب احتياجاتك.",
+            marbre_materiaux: "رخام طبيعي استثنائي في المغرب. تشكيلة متميزة من الرخام للأرضيات، الجدران، طاولات العمل، السلالم والعناصر الزخرفية. أناقة خالدة ومتانة فائقة. متوفر بالرمادي، الكريمي، البني، الأحمر، الوردي، الأسود والأصفر. كل قطعة فريدة بعروقها الطبيعية المميزة. مثالي للديكورات الداخلية الفاخرة والخارجية الراقية.",
+            aluminium_materiaux: "ألومنيوم في المغرب. مقاطع ونجارة ألومنيوم بجودة احترافية للنوافذ، الأبواب، الواجهات الزجاجية، الشرفات المغلقة، الدرابزين والواجهات. تشكيلة واسعة من الألوان، تشطيبات مؤكسدة أو مطلوبة وإكسسوارات عالية الجودة. مقاومة للتآكل ومتانة استثنائية. توصيل سريع في جميع أنحاء المغرب ونصائح خبراء لمشاريعك.",
+            peinture_materiaux: "دهانات احترافية في المغرب. مجموعة واسعة من الدهانات الداخلية والخارجية بجودة عالية. دهانات أكريليك، جليسروفتاليك، إيبوكسي وزخرفية. مقاومة للعوامل الجوية، قابلة للغسل وصديقة للبيئة. متوفرة بآلاف الألوان بتشطيبات غير لامعة، ساتان أو لامعة. نصائح خبراء لاختيار الدهان المناسب لمشروعك."
         }
     };
 
     const serviceTitles = {
-        fr: { terrasse: "Création de Terrasse", isolation: "Isolation Thermique", facade: "Ravalement de Façades", piscine: "Rénovation de Piscines", jardin: "Rénovation de Jardin", maconnerie: "Maçonnerie Générale", cuisine: "Rénovation de Cuisines", salledebain: "Salle de Bains", carrelage: "Carrelage", parquet: "Parquet", sols: "Rénovation de Sols", marbre: "Rénovation de Marbre", cloisons: "Cloisons & Faux Plafonds", platre: "Travaux Plâtre", menuiserie: "Menuiserie", peinture: "Peinture & Décoration", fenetres: "Fenêtres & Portes", nettoyage: "Nettoyage Fin de Chantier", materiaux: "Matériaux de Rénovation" },
-        es: { terrasse: "Creación de Terraza", isolation: "Aislamiento Térmico", facade: "Revestimiento de Fachadas", piscine: "Renovación de Piscinas", jardin: "Renovación de Jardín", maconnerie: "Albañilería General", cuisine: "Renovación de Cocinas", salledebain: "Baños", carrelage: "Azulejos", parquet: "Parquet", sols: "Renovación de Suelos", marbre: "Renovación de Mármol", cloisons: "Tabiques y Techos Falsos", platre: "Trabajos de Yeso", menuiserie: "Carpintería", peinture: "Pintura y Decoración", fenetres: "Ventanas y Puertas", nettoyage: "Limpieza Fin de Obra", materiaux: "Materiales de Renovación" },
-        ar: { terrasse: "إنشاء تراس", isolation: "عزل حراري", facade: "تجديد الواجهات", piscine: "تجديد المسابح", jardin: "تجديد الحديقة", maconnerie: "بناء عام", cuisine: "تجديد المطابخ", salledebain: "الحمامات", carrelage: "البلاط", parquet: "باركيه", sols: "تجديد الأرضيات", marbre: "تجديد الرخام", cloisons: "جدران وأسقف مستعارة", platre: "أعمال الجص", menuiserie: "نجارة", peinture: "دهان وديكور", fenetres: "نوافذ وأبواب", nettoyage: "تنظيف نهاية الأشغال", materiaux: "مواد التجديد" }
+        fr: { terrasse: "Création de Terrasse", isolation: "Isolation Thermique", facade: "Ravalement de Façades", piscine: "Rénovation de Piscines", jardin: "Rénovation de Jardin", maconnerie: "Maçonnerie Générale", cuisine: "Rénovation de Cuisines", salledebain: "Salle de Bains", carrelage: "Carrelage", parquet: "Parquet", sols: "Rénovation de Sols", marbre: "Rénovation de Marbre", cloisons: "Cloisons & Faux Plafonds", platre: "Travaux Plâtre", menuiserie: "Menuiserie", aluminium: "Travaux Aluminium", peinture: "Peinture & Décoration", fenetres: "Fenêtres & Portes", nettoyage: "Nettoyage Fin de Chantier", materiaux: "Matériaux de Rénovation", granit: "Granit", marbre_materiaux: "Marbre", aluminium_materiaux: "Aluminium", peinture_materiaux: "Peinture" },
+        es: { terrasse: "Creación de Terraza", isolation: "Aislamiento Térmico", facade: "Revestimiento de Fachadas", piscine: "Renovación de Piscinas", jardin: "Renovación de Jardín", maconnerie: "Albañilería General", cuisine: "Renovación de Cocinas", salledebain: "Baños", carrelage: "Azulejos", parquet: "Parquet", sols: "Renovación de Suelos", marbre: "Renovación de Mármol", cloisons: "Tabiques y Techos Falsos", platre: "Trabajos de Yeso", menuiserie: "Carpintería", aluminium: "Trabajos de Aluminio", peinture: "Pintura y Decoración", fenetres: "Ventanas y Puertas", nettoyage: "Limpieza Fin de Obra", materiaux: "Materiales de Renovación", granit: "Granito", marbre_materiaux: "Mármol", aluminium_materiaux: "Aluminio", peinture_materiaux: "Pintura" },
+        ar: { terrasse: "إنشاء تراس", isolation: "عزل حراري", facade: "تجديد الواجهات", piscine: "تجديد المسابح", jardin: "تجديد الحديقة", maconnerie: "بناء عام", cuisine: "تجديد المطابخ", salledebain: "الحمامات", carrelage: "البلاط", parquet: "باركيه", sols: "تجديد الأرضيات", marbre: "تجديد الرخام", cloisons: "جدران وأسقف مستعارة", platre: "أعمال الجص", menuiserie: "نجارة", aluminium: "أشغال الألومنيوم", peinture: "دهان وديكور", fenetres: "نوافذ وأبواب", nettoyage: "تنظيف نهاية الأشغال", materiaux: "مواد التجديد", granit: "جرانيت", marbre_materiaux: "رخام", aluminium_materiaux: "ألومنيوم", peinture_materiaux: "دهان" }
     };
 
     let currentLang = 'fr';
@@ -660,25 +685,30 @@
     }
 
     const servicesData = [
-        { id: "terrasse", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-13.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-14.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-12.jpg"] },
-        { id: "isolation", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-Isolation-Thermique-Maroc-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-Isolation-Thermique-Maroc-4.webp"] },
-        { id: "facade", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Ravalement-de-Facades-a-Maroc-2-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Ravalement-de-Facades-a-Maroc-6.webp"] },
-        { id: "piscine", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-Maroc-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-Maroc-4.webp"] },
+        { id: "terrasse", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-13.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-14.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-12.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-10.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-9.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-Maroc-6.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-a-Maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Creation-de-Terrasse-a-Maroc.webp"] },
+        { id: "isolation", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-Isolation-Thermique-Maroc-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-Isolation-Thermique-Maroc-4.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-Isolation-Thermique-Maroc-3.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-Isolation-Thermique-Maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-Isolation-Thermique-Maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-Isolation-Thermique-Maroc-6.webp"] },
+        { id: "facade", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Ravalement-de-Facades-a-Maroc-2-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Ravalement-de-Facades-a-Maroc-6.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Ravalement-de-Facades-a-Maroc-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Ravalement-de-Facades-a-Maroc-4.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Ravalement-de-Facades-a-Maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Ravalement-de-Facades-a-Maroc-1.webp"] },
+        { id: "piscine", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-Maroc-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-Maroc-4.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-Maroc-3.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-Maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-Maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-Maroc-6.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Piscines-a-Maroc.jpg"] },
         { id: "jardin", category: "exterieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2025/05/Renovation-de-jardin-600x400-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-jardin-1.png"] },
-        { id: "maconnerie", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Maconnerie-Generale.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Maconnerie-Generale-Maroc.webp"] },
-        { id: "cuisine", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-1.webp"] },
-        { id: "salledebain", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Salle-de-Bains-a-Maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/SalleDeBains_Maroc-1-5.webp"] },
-        { id: "carrelage", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-10-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-4-2.webp"] },
-        { id: "parquet", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Parquet-a-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Parquet-flottant.webp"] },
-        { id: "sols", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Sols-Maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Sols-Maroc-1.jpg"] },
-        { id: "marbre", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-renovation-marbre-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-renovation-marbre-maroc-4.webp"] },
-        { id: "cloisons", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cloisons-et-Faux-Plafonds-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cloisons-et-Faux-Plafonds-a-Maroc-3.jpg"] },
-        { id: "platre", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Travaux-Platre-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Travaux-Platre-a-Maroc.webp"] },
-        { id: "menuiserie", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-3-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Reparation-de-menuiserie-maroc.webp"] },
-        { id: "peinture", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-exterieure-a-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-2.jpg"] },
-        { id: "fenetres", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Portes-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-interiur-maroc.jpg"] },
-        { id: "nettoyage", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-de-facades.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-des-parties-communes-a-Maroc.webp"] },
-        { id: "materiaux", category: "materiaux", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Materiaux-renovation-maroc.webp"] }
+        { id: "maconnerie", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Maconnerie-Generale.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Maconnerie-Generale-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/09/Travaux-de-maconnerie-generale-1920x1020-10-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/09/Travaux-de-maconnerie-generale-1920x1020-8-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/09/Travaux-de-maconnerie-generale-1920x1020-7-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/09/Travaux-de-maconnerie-generale-1920x1020-6-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/09/Travaux-de-maconnerie-generale-1920x1020-4-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/09/Travaux-de-maconnerie-generale-1920x1020-1-1.jpg"] },
+        { id: "cuisine", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-4.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-3.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Cuisines-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2025/05/Cuisines-Namur-7.webp","https://renoexpertsmaroc.com/wp-content/uploads/2025/05/Cuisines-Namur-6.webp"] },
+        { id: "salledebain", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Salle-de-Bains-a-Maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/SalleDeBains_Maroc-1-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/SalleDeBains_Maroc-1-4.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/SalleDeBains_Maroc-1-3.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/SalleDeBains_Maroc-1-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/SalleDeBains_Maroc-1-6.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/SalleDeBains_Maroc-1-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Salle-de-Bains-a-Maroc1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Salle-de-Bains-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-Salle-de-Bains-Maroc.webp"] },
+        { id: "carrelage", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-10-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-4-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-4-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-3.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Carrelage-a-Maroc-13.webp"] },
+        { id: "parquet", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Parquet-a-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Parquet-flottant.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Reparation-de-Parquet-Ancien.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Pose-de-parquet-neuf.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-parquet-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/renovation-parquet-maroc.webp"] },
+        { id: "sols", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Sols-Maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Sols-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Sols-Maroc-6.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Sols-Maroc-5.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Sols-Maroc-4.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Renovation-de-Sols-Maroc-3.jpg"] },
+        { id: "marbre", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-renovation-marbre-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-renovation-marbre-maroc-4.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-renovation-marbre-maroc-3.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-renovation-marbre-maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-renovation-marbre-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-renovation-marbre-1.webp"] },
+        { id: "cloisons", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cloisons-et-Faux-Plafonds-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cloisons-et-Faux-Plafonds-a-Maroc-3.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cloisons-et-Faux-Plafonds-a-Maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cloisons-et-Faux-Plafonds-a-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cloisons-et-Faux-Plafonds-a-Maroc-6.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cloisons-et-Faux-Plafonds-a-Maroc-5.jpg"] },
+        { id: "platre", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Travaux-Platre-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Travaux-Platre-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2025/06/renovation-platre.jpg"] },
+        { id: "menuiserie", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-3-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Reparation-de-menuiserie-maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-6.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-5.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-4.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-3.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Menuiserie-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2025/06/Inspirez-vous-menuiserie-Namur-4.jpg"] },
+        { id: "aluminium", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Fenetres-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Fenetres-Isolantes-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Portes-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Menuiserie-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-interiur-maroc.jpg"] },
+        { id: "peinture", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-exterieure-a-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-4.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-3.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration.jpg"] },
+        { id: "fenetres", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Portes-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-interiur-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2025/06/Portes-Interieures-et-Exterieures-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Fenetres-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Fenetres-Isolantes-maroc.jpg"] },
+        { id: "nettoyage", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-de-facades.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-des-parties-communes-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-des-sanitaires-a-Maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-des-vitres-a-Maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-de-Fin-de-Chantier-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-de-Fin-de-Chantier-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-et-Entretien-piscine-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-de-bureaux-a-maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Nettoyage-de-Fin-de-Chantier-a-Maroc.jpg"] },
+        { id: "materiaux", category: "materiaux", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Materiaux-renovation-maroc.webp"] },
+        { id: "granit", category: "materiaux", images: ["https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-brun.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-Bleu.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-Blanc.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/granit-gris.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-Vert.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-rouge.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-Rose.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-noir.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-jaune.jpg"] },
+        { id: "marbre_materiaux", category: "materiaux", images: ["https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-gris.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-creme.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-brun.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-Rouge.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-rose.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-noir.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-jaune.jpg"] },
+        { id: "aluminium_materiaux", category: "materiaux", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Fenetres-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Fenetres-Isolantes-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Portes-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-maroc.webp"] },
+        { id: "peinture_materiaux", category: "materiaux", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-4.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-3.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-exterieure-a-Maroc-1.jpg"] }
     ];
 
     const reviewsData = [
@@ -770,7 +800,6 @@
         });
     }
 
-    // ===== ASISTENTE =====
     let chatStep = 'welcome';
     let chatData = { name: '', email: '', phone: '', service: '', city: '', scope: '' };
     let chatInitialized = false;
@@ -936,7 +965,6 @@
         }
     });
 
-    // ===== MODALES =====
     let lastFocusedElement = null;
     function openServiceModal(serviceId) {
         const service = servicesData.find(s => s.id === serviceId);
@@ -999,7 +1027,6 @@
         }
     });
 
-    // ===== MENÚ =====
     function toggleMobileDropdown(event, element) {
         if (window.innerWidth <= 968) {
             event.preventDefault();
@@ -1023,7 +1050,6 @@
         document.querySelectorAll('.nav-item.open').forEach(item => item.classList.remove('open'));
     }
 
-    // ===== IDIOMA (desktop + móvil sincronizados, con null-safety) =====
     function setLang(lang) {
         const flagMap = { fr: '🇫🇷', es: '🇪', ar: '🇦' };
         const flag = flagMap[lang] || '🇫🇷';
@@ -1064,7 +1090,7 @@
 
     if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
         const swCode = `
-            const CACHE_NAME = 'reno-experts-v10';
+            const CACHE_NAME = 'reno-experts-v13';
             self.addEventListener('install', e => e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(['./', './index.html'])).then(() => self.skipWaiting())));
             self.addEventListener('activate', e => e.waitUntil(caches.keys().then(names => Promise.all(names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n)))).then(() => self.clients.claim())));
             self.addEventListener('fetch', e => {
