@@ -89,15 +89,16 @@
         .btn-primary { background: var(--secondary); color: white; }
         .btn-large { padding: 1rem 2rem; font-size: 1.05rem; margin-top: 1.5rem; width: 100%; justify-content: center; }
 
+        /* HERO CON MÁS ESPACIO SUPERIOR E INFERIOR */
         .hero { 
             background-image: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.5)), url('https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Entreprise-de-Renovation-a-Maroc.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             color: white; 
-            padding: 8rem 1.5rem; 
+            padding: 10rem 1.5rem; 
             text-align: center; 
-            min-height: 80vh; 
+            min-height: 85vh; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
@@ -105,7 +106,6 @@
             overflow: hidden; 
         }
         .hero-content { position: relative; z-index: 1; max-width: 900px; }
-        /* TÍTULO REDUCIDO */
         .hero-content h1 { font-size: clamp(2.5rem, 5.5vw, 3.75rem); margin-bottom: 1.5rem; line-height: 1.15; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
         .hero-content p { font-size: clamp(1.15rem, 2.5vw, 1.5rem); margin-bottom: 2.5rem; opacity: 0.98; max-width: 750px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
@@ -257,8 +257,8 @@
             .mobile-lang-selector .lang-btn { width: 100%; justify-content: space-between; }
             .mobile-lang-selector .lang-dropdown { position: static; width: 100%; margin-top: 0.5rem; box-shadow: none; border: 1px solid #e2e8f0; }
 
-            .hero { padding: 5rem 1.5rem; min-height: 70vh; }
-            /* TÍTULO REDUCIDO EN MÓVIL */
+            /* HERO MÓVIL CON MÁS ESPACIO */
+            .hero { padding: 6.5rem 1.5rem; min-height: 75vh; }
             .hero-content h1 { font-size: clamp(2rem, 7.5vw, 2.6rem); }
             .hero-content p { font-size: clamp(1.1rem, 4.5vw, 1.35rem); }
             .hero-buttons { flex-direction: column; width: 100%; }
@@ -303,17 +303,18 @@
 
                 <div class="mobile-menu-body">
                     <ul class="nav-links">
-                        <li class="nav-item" data-category="exterieure">
-                            <a class="nav-anchor" href="#exterieure" onclick="toggleMobileDropdown(event, this)">
-                                <span data-i18n="nav_ext">Rénovation Extérieure</span> <span class="dropdown-arrow">▼</span>
-                            </a>
-                            <div class="dropdown-menu" id="dropdown-exterieure"></div>
-                        </li>
+                        <!-- ORDEN: INTÉRIEURE PRIMERO -->
                         <li class="nav-item" data-category="interieure">
                             <a class="nav-anchor" href="#interieure" onclick="toggleMobileDropdown(event, this)">
                                 <span data-i18n="nav_int">Rénovation Intérieure</span> <span class="dropdown-arrow">▼</span>
                             </a>
                             <div class="dropdown-menu" id="dropdown-interieure"></div>
+                        </li>
+                        <li class="nav-item" data-category="exterieure">
+                            <a class="nav-anchor" href="#exterieure" onclick="toggleMobileDropdown(event, this)">
+                                <span data-i18n="nav_ext">Rénovation Extérieure</span> <span class="dropdown-arrow">▼</span>
+                            </a>
+                            <div class="dropdown-menu" id="dropdown-exterieure"></div>
                         </li>
                         <li class="nav-item" data-category="autres">
                             <a class="nav-anchor" href="#autres" onclick="toggleMobileDropdown(event, this)">
@@ -382,20 +383,21 @@
             <h1 data-i18n="hero_title">Rénovation au Maroc</h1>
             <p data-i18n="hero_desc">Artisans qualifiés à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Qualité supérieure, matériaux durables et devis gratuit.</p>
             <div class="hero-buttons">
-                <a href="#exterieure" class="btn btn-primary" data-i18n="hero_btn1">Découvrir nos services</a>
+                <a href="#interieure" class="btn btn-primary" data-i18n="hero_btn1">Découvrir nos services</a>
                 <a href="https://wa.seo-local.click/es/whatsapp-business-directory/02f99a39-9baf-48d9-ae2c-6d0e3d32510d" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="hero_btn2">Devis WhatsApp</a>
             </div>
         </div>
     </section>
 
     <main class="container">
-        <section id="exterieure" class="services-section">
-            <h2 class="section-title" data-i18n="nav_ext">Rénovation Extérieure</h2>
-            <div class="services-grid" id="grid-exterieure"></div>
-        </section>
+        <!-- ORDEN: INTÉRIEURE PRIMERO, EXTÉRIEURE DESPUÉS -->
         <section id="interieure" class="services-section">
             <h2 class="section-title" data-i18n="nav_int">Rénovation Intérieure</h2>
             <div class="services-grid" id="grid-interieure"></div>
+        </section>
+        <section id="exterieure" class="services-section">
+            <h2 class="section-title" data-i18n="nav_ext">Rénovation Extérieure</h2>
+            <div class="services-grid" id="grid-exterieure"></div>
         </section>
         <section id="autres" class="services-section">
             <h2 class="section-title" data-i18n="nav_autres">Autres Services</h2>
@@ -427,13 +429,14 @@
                     <h3 data-i18n="footer_brand_title">Entreprise de Rénovation au Maroc</h3>
                     <p data-i18n="footer_brand_desc">Votre partenaire de confiance pour tous vos projets de rénovation au Maroc.</p>
                 </div>
-                <div class="footer-col">
-                    <h4 data-i18n="nav_ext">Rénovation Extérieure</h4>
-                    <ul id="footer-list-ext"></ul>
-                </div>
+                <!-- ORDEN: INTÉRIEURE PRIMERO -->
                 <div class="footer-col">
                     <h4 data-i18n="nav_int">Rénovation Intérieure</h4>
                     <ul id="footer-list-int"></ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="nav_ext">Rénovation Extérieure</h4>
+                    <ul id="footer-list-ext"></ul>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="footer_contact">Contact</h4>
@@ -527,9 +530,11 @@
             rev3_name: "Karim T.", rev3_city: "Marrakech", rev3_text: "Isolation thermique parfaite. Mes factures d'énergie ont baissé de 30%. Service au top.",
             chat_welcome: "Bonjour ! 👋 Je suis l'assistant Rénovation au Maroc.",
             chat_intro: "Je vais vous aider à obtenir un devis gratuit et personnalisé. Commençons !",
-            chat_btn_start: "🚀 Commencer la demande",
+            chat_ask_service: "Quel service vous intéresse ?",
+            chat_ask_city: "Dans quelle ville se trouve votre projet ?",
+            chat_ask_scope: "Quelle est l'envergure de votre projet ?",
+            chat_contact_intro: "Parfait ! 🎉 Maintenant, laissez-moi vos coordonnées pour vous envoyer le devis gratuit.",
             chat_ask_name: "Quel est votre nom ?", chat_ask_email: "Quel est votre email ?", chat_ask_phone: "Quel est votre numéro de téléphone ?",
-            chat_ask_service: "Quel service vous intéresse ?", chat_ask_city: "Dans quelle ville se trouve votre projet ?", chat_ask_scope: "Quelle est l'envergure de votre projet ?",
             chat_summary_title: "Parfait ! Voici le résumé de votre demande :",
             chat_btn_send: "📱 Envoyer par WhatsApp", chat_btn_restart: "🔄 Nouvelle demande",
             opt_petit: "📏 Petit projet", opt_moyen: "📐 Projet moyen", opt_grand: "🏗️ Grand projet", opt_urgent: "⚡ Urgent",
@@ -562,9 +567,11 @@
             rev3_name: "Karim T.", rev3_city: "Marrakech", rev3_text: "Aislamiento térmico perfecto. Mis facturas de energía bajaron un 30%. Servicio de primera.",
             chat_welcome: "¡Hola! 👋 Soy el asistente de Rénovation au Maroc.",
             chat_intro: "Te ayudaré a obtener un presupuesto gratuito y personalizado. ¡Empecemos!",
-            chat_btn_start: "🚀 Comenzar solicitud",
+            chat_ask_service: "¿Qué servicio te interesa?",
+            chat_ask_city: "¿En qué ciudad se encuentra tu proyecto?",
+            chat_ask_scope: "¿Cuál es la envergadura de tu proyecto?",
+            chat_contact_intro: "¡Perfecto! 🎉 Ahora déjame tus datos para enviarte el presupuesto gratuito.",
             chat_ask_name: "¿Cuál es tu nombre?", chat_ask_email: "¿Cuál es tu email?", chat_ask_phone: "¿Cuál es tu número de teléfono?",
-            chat_ask_service: "¿Qué servicio te interesa?", chat_ask_city: "¿En qué ciudad se encuentra tu proyecto?", chat_ask_scope: "¿Cuál es la envergadura de tu proyecto?",
             chat_summary_title: "¡Perfecto! Aquí tienes el resumen de tu solicitud:",
             chat_btn_send: "📱 Enviar por WhatsApp", chat_btn_restart: "🔄 Nueva solicitud",
             opt_petit: "📏 Proyecto pequeño", opt_moyen: "📐 Proyecto mediano", opt_grand: "🏗️ Gran proyecto", opt_urgent: "⚡ Urgente",
@@ -597,9 +604,11 @@
             rev3_name: "كريم ت.", rev3_city: "مراكش", rev3_text: "عزل حراري مثالي. انخفضت فواتير الطاقة بنسبة 30٪. خدمة ممتازة.",
             chat_welcome: "مرحبا! 👋 أنا مساعد التجديد في المغرب.",
             chat_intro: "سأساعدك في الحصول على عرض أسعار مجاني ومخصص. لنبدأ!",
-            chat_btn_start: "🚀 ابدأ الطلب",
+            chat_ask_service: "ما الخدمة التي تهمك؟",
+            chat_ask_city: "في أي مدينة يقع مشروعك؟",
+            chat_ask_scope: "ما هو حجم مشروعك؟",
+            chat_contact_intro: "ممتاز! 🎉 الآن اترك بياناتك لإرسال عرض الأسعار المجاني.",
             chat_ask_name: "ما هو اسمك؟", chat_ask_email: "ما هو بريدك الإلكتروني؟", chat_ask_phone: "ما هو رقم هاتفك؟",
-            chat_ask_service: "ما الخدمة التي تهمك؟", chat_ask_city: "في أي مدينة يقع مشروعك؟", chat_ask_scope: "ما هو حجم مشروعك؟",
             chat_summary_title: "ممتاز! إليك ملخص طلبك:",
             chat_btn_send: "📱 إرسال عبر واتساب", chat_btn_restart: "🔄 طلب جديد",
             opt_petit: "📏 مشروع صغير", opt_moyen: "📐 مشروع متوسط", opt_grand: "🏗️ مشروع كبير", opt_urgent: "⚡ عاجل",
@@ -733,7 +742,6 @@
         { id: "platre", category: "interieure", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Travaux-Platre-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Travaux-Platre-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2025/06/renovation-platre.jpg"] },
         { id: "menuiserie", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-3-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Reparation-de-menuiserie-maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-6.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-5.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-4.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-3.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Inspirez-vous-menuiserie-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Menuiserie-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2025/06/Inspirez-vous-menuiserie-Namur-4.jpg"] },
         { id: "aluminium", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Fenetres-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Fenetres-Isolantes-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Portes-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Menuiserie-a-Maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-interiur-maroc.jpg"] },
-        /* REMPLACEZ par vos photos inox générées (garde-corps, escalier, cuisine, portail) */
         { id: "inox", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-4.webp"] },
         { id: "peinture", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-exterieure-a-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-4.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-3.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration.jpg"] },
         { id: "fenetres", category: "autres", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Portes-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-interiur-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-maroc.webp","https://renoexpertsmaroc.com/wp-content/uploads/2025/06/Portes-Interieures-et-Exterieures-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Fenetres-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Fenetres-Isolantes-maroc.jpg"] },
@@ -742,7 +750,6 @@
         { id: "granit", category: "materiaux", images: ["https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-brun.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-Bleu.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-Blanc.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/granit-gris.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-Vert.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-rouge.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-Rose.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-noir.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Granit-jaune.jpg"] },
         { id: "marbre_materiaux", category: "materiaux", images: ["https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-gris.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-creme.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-brun.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-Rouge.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-rose.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-noir.jpg","https://safamar.seo-local.click/wp-content/uploads/2026/08/Marbre-jaune.jpg"] },
         { id: "aluminium_materiaux", category: "materiaux", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Fenetres-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Fenetres-Isolantes-maroc.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Installation-de-Portes-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/portes-maroc.webp"] },
-        /* REMPLACEZ par vos photos inox générées (garde-corps, escalier, cuisine, portail) */
         { id: "inox_materiaux", category: "materiaux", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-2.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-1.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-5.webp","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Cuisines-maroc-4.webp"] },
         { id: "peinture_materiaux", category: "materiaux", images: ["https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-2.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-1.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-4.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration-a-Casablanca-Maroc-3.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-et-Decoration.jpg","https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Peinture-exterieure-a-Maroc-1.jpg"] }
     ];
@@ -754,7 +761,7 @@
     ];
 
     function renderDynamicMenus() {
-        ['exterieure', 'interieure', 'autres', 'materiaux'].forEach(cat => {
+        ['interieure', 'exterieure', 'autres', 'materiaux'].forEach(cat => {
             const container = document.getElementById(`dropdown-${cat}`);
             if (!container) return;
             container.innerHTML = '';
@@ -769,7 +776,7 @@
     }
 
     function renderServices() {
-        ['exterieure', 'interieure', 'autres', 'materiaux'].forEach(cat => {
+        ['interieure', 'exterieure', 'autres', 'materiaux'].forEach(cat => {
             const grid = document.getElementById(`grid-${cat}`);
             if (!grid) return;
             grid.innerHTML = '';
@@ -836,6 +843,7 @@
         });
     }
 
+    // ASISTENTE: orden nuevo -> servicio, ciudad, envergadura, y al final nombre/email/teléfono
     let chatStep = 'welcome';
     let chatData = { name: '', email: '', phone: '', service: '', city: '', scope: '' };
     let chatInitialized = false;
@@ -915,31 +923,19 @@
 
     function advanceChatStep() {
         if (chatStep === 'welcome') {
-            chatStep = 'ask_name';
-            addMessage(t('chat_welcome') + '\n\n' + t('chat_intro'), 'bot');
-            setTimeout(() => { addMessage(t('chat_ask_name'), 'bot'); showTempInput('name'); }, 400);
-        } else if (chatStep === 'ask_name') {
-            chatStep = 'ask_email';
-            addMessage(t('chat_ask_email'), 'bot');
-            setTimeout(() => showTempInput('email'), 400);
-        } else if (chatStep === 'ask_email') {
-            chatStep = 'ask_phone';
-            addMessage(t('chat_ask_phone'), 'bot');
-            setTimeout(() => showTempInput('phone'), 400);
-        } else if (chatStep === 'ask_phone') {
-            chatStep = 'ask_start';
-            setTimeout(() => showChatButtons([{ label: t('chat_btn_start'), value: 'start', fullWidth: true }]), 400);
-        } else if (chatStep === 'ask_start') {
             chatStep = 'ask_service';
-            addMessage(t('chat_ask_service'), 'bot');
-            setTimeout(() => showChatButtons([
-                { label: serviceTitles[currentLang].terrasse, value: 'terrasse' },
-                { label: serviceTitles[currentLang].cuisine, value: 'cuisine' },
-                { label: serviceTitles[currentLang].salledebain, value: 'salledebain' },
-                { label: serviceTitles[currentLang].piscine, value: 'piscine' },
-                { label: serviceTitles[currentLang].peinture, value: 'peinture' },
-                { label: serviceTitles[currentLang].isolation, value: 'isolation' }
-            ]), 400);
+            addMessage(t('chat_welcome') + '\n\n' + t('chat_intro'), 'bot');
+            setTimeout(() => {
+                addMessage(t('chat_ask_service'), 'bot');
+                showChatButtons([
+                    { label: serviceTitles[currentLang].cuisine, value: 'cuisine' },
+                    { label: serviceTitles[currentLang].salledebain, value: 'salledebain' },
+                    { label: serviceTitles[currentLang].terrasse, value: 'terrasse' },
+                    { label: serviceTitles[currentLang].piscine, value: 'piscine' },
+                    { label: serviceTitles[currentLang].peinture, value: 'peinture' },
+                    { label: serviceTitles[currentLang].isolation, value: 'isolation' }
+                ]);
+            }, 400);
         } else if (chatStep === 'ask_service') {
             chatStep = 'ask_city';
             addMessage(t('chat_ask_city'), 'bot');
@@ -956,8 +952,20 @@
                 { label: t('opt_grand'), value: 'grand' }, { label: t('opt_urgent'), value: 'urgent', fullWidth: true }
             ]), 400);
         } else if (chatStep === 'ask_scope') {
+            chatStep = 'ask_name';
+            addMessage(t('chat_contact_intro'), 'bot');
+            setTimeout(() => { addMessage(t('chat_ask_name'), 'bot'); showTempInput('name'); }, 400);
+        } else if (chatStep === 'ask_name') {
+            chatStep = 'ask_email';
+            addMessage(t('chat_ask_email'), 'bot');
+            setTimeout(() => showTempInput('email'), 400);
+        } else if (chatStep === 'ask_email') {
+            chatStep = 'ask_phone';
+            addMessage(t('chat_ask_phone'), 'bot');
+            setTimeout(() => showTempInput('phone'), 400);
+        } else if (chatStep === 'ask_phone') {
             chatStep = 'summary';
-            const summaryText = `${t('chat_summary_title')}\n\n👤 ${chatData.name}\n📧 ${chatData.email}\n📞 ${chatData.phone}\n🔧 ${chatData.service}\n📍 ${chatData.city}\n📏 ${chatData.scope}`;
+            const summaryText = `${t('chat_summary_title')}\n\n🔧 ${chatData.service}\n📍 ${chatData.city}\n📏 ${chatData.scope}\n👤 ${chatData.name}\n📧 ${chatData.email}\n📞 ${chatData.phone}`;
             addMessage(summaryText, 'bot');
             setTimeout(() => showChatButtons([
                 { label: t('chat_btn_send'), value: 'send', fullWidth: true },
@@ -989,7 +997,7 @@
     });
     document.addEventListener('click', (e) => {
         if (e.target.textContent && e.target.textContent.includes(t('chat_btn_send').substring(0, 5))) {
-            const summaryText = `=== DEMANDE DE DEVIS ===\nNom: ${chatData.name}\nEmail: ${chatData.email}\nTéléphone: ${chatData.phone}\nService: ${chatData.service}\nVille: ${chatData.city}\nEnvergure: ${chatData.scope}\n\nEnviado desde web Rénovation au Maroc`;
+            const summaryText = `=== DEMANDE DE DEVIS ===\nService: ${chatData.service}\nVille: ${chatData.city}\nEnvergure: ${chatData.scope}\nNom: ${chatData.name}\nEmail: ${chatData.email}\nTéléphone: ${chatData.phone}\n\nEnviado desde web Rénovation au Maroc`;
             const whatsappUrl = `https://wa.me/212670964030?text=${encodeURIComponent(summaryText)}`;
             try {
                 window.open(whatsappUrl, '_blank');
@@ -1126,7 +1134,7 @@
 
     if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
         const swCode = `
-            const CACHE_NAME = 'reno-experts-v18';
+            const CACHE_NAME = 'reno-experts-v19';
             self.addEventListener('install', e => e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(['./', './index.html'])).then(() => self.skipWaiting())));
             self.addEventListener('activate', e => e.waitUntil(caches.keys().then(names => Promise.all(names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n)))).then(() => self.clients.claim())));
             self.addEventListener('fetch', e => {
