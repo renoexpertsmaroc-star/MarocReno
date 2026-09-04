@@ -105,7 +105,8 @@
             overflow: hidden; 
         }
         .hero-content { position: relative; z-index: 1; max-width: 900px; }
-        .hero-content h1 { font-size: clamp(3rem, 7vw, 5rem); margin-bottom: 1.5rem; line-height: 1.15; font-weight: 400; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
+        /* TÍTULO REDUCIDO */
+        .hero-content h1 { font-size: clamp(2.5rem, 5.5vw, 3.75rem); margin-bottom: 1.5rem; line-height: 1.15; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
         .hero-content p { font-size: clamp(1.15rem, 2.5vw, 1.5rem); margin-bottom: 2.5rem; opacity: 0.98; max-width: 750px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .hero-buttons .btn { flex: 0 1 auto; min-width: 200px; }
@@ -257,7 +258,8 @@
             .mobile-lang-selector .lang-dropdown { position: static; width: 100%; margin-top: 0.5rem; box-shadow: none; border: 1px solid #e2e8f0; }
 
             .hero { padding: 5rem 1.5rem; min-height: 70vh; }
-            .hero-content h1 { font-size: clamp(2.5rem, 9vw, 3.5rem); }
+            /* TÍTULO REDUCIDO EN MÓVIL */
+            .hero-content h1 { font-size: clamp(2rem, 7.5vw, 2.6rem); }
             .hero-content p { font-size: clamp(1.1rem, 4.5vw, 1.35rem); }
             .hero-buttons { flex-direction: column; width: 100%; }
             .hero-buttons .btn { width: 100%; }
@@ -1124,7 +1126,7 @@
 
     if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
         const swCode = `
-            const CACHE_NAME = 'reno-experts-v17';
+            const CACHE_NAME = 'reno-experts-v18';
             self.addEventListener('install', e => e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(['./', './index.html'])).then(() => self.skipWaiting())));
             self.addEventListener('activate', e => e.waitUntil(caches.keys().then(names => Promise.all(names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n)))).then(() => self.clients.claim())));
             self.addEventListener('fetch', e => {
