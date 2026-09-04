@@ -7,13 +7,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Rénovation au Maroc">
-    <title>Rénovation au Maroc - Rénovation Professionnelle</title>
-    <meta name="description" content="Rénovation au Maroc : artisans qualifiés pour création de terrasses, isolation, piscines, cuisines, salles de bains, carrelage, parquet, aluminium, inox. Devis gratuit.">
+    <title>Rénovation au Maroc – Artisans qualifiés & devis gratuit</title>
+    <meta name="description" content="Rénovation au Maroc : terrasses, cuisines, salles de bains, façades, peinture, marbre. Artisans qualifiés à Tetouan, Tanger, Casablanca, Marrakech, Rabat. Devis gratuit.">
+    <meta name="keywords" content="rénovation Maroc, entreprise rénovation, terrasse Maroc, cuisine Maroc, salle de bain Maroc, façade, peinture, marbre, devis gratuit rénovation, Tetouan, Tanger, Casablanca, Marrakech, Rabat">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Rénovation au Maroc">
-    <meta property="og:description" content="Artisans qualifiés pour tous vos travaux de rénovation au Maroc. Devis gratuit.">
-    <meta property="og:image" content="https://renoexpertsmaroc.com/wp-content/uploads/2025/05/logo-Reno-Experts.png">
+    <meta property="og:title" content="Rénovation au Maroc – Artisans qualifiés & devis gratuit">
+    <meta property="og:description" content="Terrasses, cuisines, salles de bains, façades, peinture, marbre. Artisans qualifiés à Tetouan, Tanger, Casablanca, Marrakech, Rabat. Devis gratuit.">
+    <meta property="og:image" content="https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Entreprise-de-Renovation-a-Maroc.webp">
+    <meta property="og:url" content="https://renoexpertsmaroc.com">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rénovation au Maroc – Artisans qualifiés & devis gratuit">
+    <meta name="twitter:description" content="Terrasses, cuisines, salles de bains, façades, peinture, marbre. Devis gratuit au Maroc.">
     <link rel="canonical" href="https://renoexpertsmaroc.com">
     <link rel="apple-touch-icon" href="https://renoexpertsmaroc.com/wp-content/uploads/2025/05/logo-Reno-Experts.png">
     <link rel="icon" type="image/png" href="https://renoexpertsmaroc.com/wp-content/uploads/2025/05/logo-Reno-Experts.png">
@@ -89,25 +95,15 @@
         .btn-primary { background: var(--secondary); color: white; }
         .btn-large { padding: 1rem 2rem; font-size: 1.05rem; margin-top: 1.5rem; width: 100%; justify-content: center; }
 
-        /* HERO CON MÁS ESPACIO SUPERIOR E INFERIOR */
         .hero { 
             background-image: linear-gradient(rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.5)), url('https://renoexpertsmaroc.com/wp-content/uploads/2026/08/Entreprise-de-Renovation-a-Maroc.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white; 
-            padding: 10rem 1.5rem; 
-            text-align: center; 
-            min-height: 85vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            position: relative; 
-            overflow: hidden; 
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            color: white; padding: 12rem 1.5rem; text-align: center; min-height: 90vh;
+            display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; 
         }
         .hero-content { position: relative; z-index: 1; max-width: 900px; }
-        .hero-content h1 { font-size: clamp(2.5rem, 5.5vw, 3.75rem); margin-bottom: 1.5rem; line-height: 1.15; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
-        .hero-content p { font-size: clamp(1.15rem, 2.5vw, 1.5rem); margin-bottom: 2.5rem; opacity: 0.98; max-width: 750px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
+        .hero-content h1 { font-size: clamp(2.25rem, 4.5vw, 3.25rem); margin-bottom: 1.5rem; line-height: 1.15; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
+        .hero-content p { font-size: clamp(1.05rem, 2vw, 1.25rem); margin-bottom: 2.5rem; opacity: 0.98; max-width: 780px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
         .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .hero-buttons .btn { flex: 0 1 auto; min-width: 200px; }
 
@@ -135,6 +131,19 @@
         .review-text { color: var(--gray); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; font-style: italic; }
         .review-author { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
         .review-city { color: var(--gray); font-size: 0.85rem; }
+
+        /* ===== NUEVA SECCIÓN CTA + WIDGET WHATSAPP ===== */
+        .cta-section { padding: 5rem 0; }
+        .cta-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3.5rem; align-items: start; }
+        .cta-title { font-size: clamp(1.6rem, 3vw, 2.3rem); color: var(--dark); text-align: center; margin-bottom: 1rem; line-height: 1.3; font-weight: 800; }
+        .cta-subtitle { text-align: center; color: var(--gray); margin-bottom: 2.75rem; font-size: 1rem; }
+        .cta-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem 2.25rem; }
+        .cta-benefit { display: flex; gap: 0.8rem; align-items: flex-start; color: var(--gray); font-size: 0.95rem; line-height: 1.45; }
+        .cta-icon { color: var(--secondary); flex-shrink: 0; width: 26px; height: 26px; display: inline-flex; }
+        .cta-icon svg { width: 100%; height: 100%; fill: currentColor; }
+        .cta-card { background: #262626; border-radius: 14px; padding: 2.25rem; box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+        .cta-card h3 { color: white; font-size: 1.45rem; margin-bottom: 1.75rem; font-weight: 700; line-height: 1.3; }
+        .cta-card .btn-cta-note { color: #9ca3af; font-size: 0.85rem; margin-top: 1.25rem; }
 
         .footer { background: var(--footer-bg); color: var(--footer-text); padding: 4rem 0 0; margin-top: 4rem; }
         .footer-main { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; }
@@ -226,20 +235,11 @@
             .mobile-menu-btn { display: block; }
             .header-actions { display: none; }
             .lang-selector { display: none; }
-
-            .nav-menu {
-                position: fixed; top: 0; right: -100%; width: 85%; max-width: 360px; height: 100vh;
-                background: white; flex-direction: column; padding: 0;
-                transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-                overflow-y: auto; align-items: stretch; z-index: 1100; gap: 0;
-                box-shadow: -4px 0 20px rgba(0,0,0,0.15);
-            }
+            .nav-menu { position: fixed; top: 0; right: -100%; width: 85%; max-width: 360px; height: 100vh; background: white; flex-direction: column; padding: 0; transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1); overflow-y: auto; align-items: stretch; z-index: 1100; gap: 0; box-shadow: -4px 0 20px rgba(0,0,0,0.15); }
             .nav-menu.active { right: 0; }
-
             .mobile-menu-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; border-bottom: 1px solid #e2e8f0; background: var(--light); }
             .mobile-menu-header h3 { color: var(--primary); font-size: 1.1rem; font-weight: 700; }
             .mobile-menu-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--dark); padding: 0.25rem 0.5rem; line-height: 1; }
-
             .mobile-menu-body { padding: 0.5rem 0; flex: 1; }
             .nav-links { flex-direction: column; width: 100%; gap: 0; align-items: stretch; }
             .nav-item { width: 100%; border-bottom: 1px solid #f1f5f9; }
@@ -249,20 +249,18 @@
             .nav-item.open > .dropdown-menu { max-height: 500px; padding: 0.5rem 0; }
             .nav-item.open .dropdown-arrow { transform: rotate(180deg); }
             .dropdown-menu a { padding: 0.85rem 2.5rem; font-size: 0.92rem; }
-
             .mobile-menu-actions { display: flex; flex-direction: column; gap: 0.75rem; padding: 1rem 1.5rem; border-top: 1px solid #e2e8f0; background: var(--light); }
             .mobile-menu-actions .btn { width: 100%; justify-content: center; padding: 0.9rem 1.3rem; }
-
             .mobile-lang-selector { display: block; padding: 1rem 1.5rem; border-top: 1px solid #e2e8f0; }
             .mobile-lang-selector .lang-btn { width: 100%; justify-content: space-between; }
             .mobile-lang-selector .lang-dropdown { position: static; width: 100%; margin-top: 0.5rem; box-shadow: none; border: 1px solid #e2e8f0; }
-
-            /* HERO MÓVIL CON MÁS ESPACIO */
-            .hero { padding: 6.5rem 1.5rem; min-height: 75vh; }
-            .hero-content h1 { font-size: clamp(2rem, 7.5vw, 2.6rem); }
-            .hero-content p { font-size: clamp(1.1rem, 4.5vw, 1.35rem); }
+            .hero { padding: 8rem 1.5rem; min-height: 80vh; }
+            .hero-content h1 { font-size: clamp(1.75rem, 6.5vw, 2.25rem); }
+            .hero-content p { font-size: clamp(1rem, 4vw, 1.15rem); }
             .hero-buttons { flex-direction: column; width: 100%; }
             .hero-buttons .btn { width: 100%; }
+            .cta-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .cta-benefits { grid-template-columns: 1fr; gap: 1.25rem; }
             .modal-body { grid-template-columns: 1fr; }
             .modal-gallery { border-radius: 16px 16px 0 0; padding: 1rem; }
             .modal-main-img-wrapper { height: 250px; }
@@ -300,10 +298,8 @@
                     <h3 data-i18n="menu_title">Menu</h3>
                     <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Fermer">✕</button>
                 </div>
-
                 <div class="mobile-menu-body">
                     <ul class="nav-links">
-                        <!-- ORDEN: INTÉRIEURE PRIMERO -->
                         <li class="nav-item" data-category="interieure">
                             <a class="nav-anchor" href="#interieure" onclick="toggleMobileDropdown(event, this)">
                                 <span data-i18n="nav_int">Rénovation Intérieure</span> <span class="dropdown-arrow">▼</span>
@@ -330,7 +326,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <div class="mobile-menu-actions">
                     <a href="https://wa.seo-local.click/es/whatsapp-business-directory/02f99a39-9baf-48d9-ae2c-6d0e3d32510d" target="_blank" rel="noopener" class="btn btn-whatsapp" onclick="closeMobileMenu()">
                         <span data-i18n="btn_devis">Devis Gratuit</span>
@@ -339,7 +334,6 @@
                         <span data-i18n="btn_call">Appeler</span>
                     </a>
                 </div>
-
                 <div class="mobile-lang-selector">
                     <button class="lang-btn" id="mobileLangBtn" aria-haspopup="true" aria-expanded="false">
                         <span id="mobileCurrentFlag">🇫🇷</span>
@@ -348,7 +342,7 @@
                     </button>
                     <div class="lang-dropdown" id="mobileLangDropdown" role="menu">
                         <div class="lang-option active" data-lang="fr" role="menuitem">🇫🇷 Français</div>
-                        <div class="lang-option" data-lang="es" role="menuitem">🇪🇸 Español</div>
+                        <div class="lang-option" data-lang="es" role="menuitem">🇪 Español</div>
                         <div class="lang-option" data-lang="ar" role="menuitem">🇲🇦 العربية</div>
                     </div>
                 </div>
@@ -362,7 +356,7 @@
                 </button>
                 <div class="lang-dropdown" id="langDropdown" role="menu">
                     <div class="lang-option active" data-lang="fr" role="menuitem">🇫🇷 Français</div>
-                    <div class="lang-option" data-lang="es" role="menuitem">🇪🇸 Español</div>
+                    <div class="lang-option" data-lang="es" role="menuitem">🇪 Español</div>
                     <div class="lang-option" data-lang="ar" role="menuitem">🇲🇦 العربية</div>
                 </div>
             </div>
@@ -380,8 +374,8 @@
 
     <section class="hero">
         <div class="container hero-content">
-            <h1 data-i18n="hero_title">Rénovation au Maroc</h1>
-            <p data-i18n="hero_desc">Artisans qualifiés à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Qualité supérieure, matériaux durables et devis gratuit.</p>
+            <h1 data-i18n="hero_title">Rénovation au Maroc : artisans qualifiés, devis gratuit</h1>
+            <p data-i18n="hero_desc">Votre entreprise de rénovation au Maroc : terrasses, cuisines, salles de bains, façades, peinture, marbre et plus. Intervention rapide à Tetouan, Tanger, Casablanca, Marrakech et Rabat — devis gratuit et sans engagement.</p>
             <div class="hero-buttons">
                 <a href="#interieure" class="btn btn-primary" data-i18n="hero_btn1">Découvrir nos services</a>
                 <a href="https://wa.seo-local.click/es/whatsapp-business-directory/02f99a39-9baf-48d9-ae2c-6d0e3d32510d" target="_blank" rel="noopener" class="btn btn-whatsapp" data-i18n="hero_btn2">Devis WhatsApp</a>
@@ -390,7 +384,6 @@
     </section>
 
     <main class="container">
-        <!-- ORDEN: INTÉRIEURE PRIMERO, EXTÉRIEURE DESPUÉS -->
         <section id="interieure" class="services-section">
             <h2 class="section-title" data-i18n="nav_int">Rénovation Intérieure</h2>
             <div class="services-grid" id="grid-interieure"></div>
@@ -416,6 +409,55 @@
         </div>
     </section>
 
+    <!-- ===== NUEVA SECCIÓN CTA + WIDGET WHATSAPP (debajo de reseñas) ===== -->
+    <section class="cta-section">
+        <div class="container cta-grid">
+            <div class="cta-left">
+                <h2 class="cta-title" data-i18n="cta_title">Vous imaginez votre espace rénové, mais ne savez pas par où commencer ?</h2>
+                <p class="cta-subtitle" data-i18n="cta_subtitle">Laissez-nous vous guider vers la transformation parfaite.</p>
+                <div class="cta-benefits">
+                    <div class="cta-benefit">
+                        <span class="cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg></span>
+                        <span data-i18n="cta_b1">Expertise Technique de Haut Niveau</span>
+                    </div>
+                    <div class="cta-benefit">
+                        <span class="cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.02 0-1.41z"/></svg></span>
+                        <span data-i18n="cta_b5">Design Innovant et Créatif</span>
+                    </div>
+                    <div class="cta-benefit">
+                        <span class="cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></span>
+                        <span data-i18n="cta_b2">Approche Personnalisée et Sur Mesure</span>
+                    </div>
+                    <div class="cta-benefit">
+                        <span class="cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.53 11.06L15.47 10l-4.88 4.88-2.12-2.12-1.06 1.06L10.59 17l5.94-5.94zM19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg></span>
+                        <span data-i18n="cta_b6">Respect des Délais et Budgets Fixés</span>
+                    </div>
+                    <div class="cta-benefit">
+                        <span class="cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg></span>
+                        <span data-i18n="cta_b3">Gestion de Projet Efficace et Transparente</span>
+                    </div>
+                    <div class="cta-benefit">
+                        <span class="cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg></span>
+                        <span data-i18n="cta_b7">Sélection Rigoureuse des Matériaux</span>
+                    </div>
+                    <div class="cta-benefit">
+                        <span class="cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></span>
+                        <span data-i18n="cta_b4">Qualité et Durabilité Garanties</span>
+                    </div>
+                    <div class="cta-benefit">
+                        <span class="cta-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></span>
+                        <span data-i18n="cta_b8">Devis Gratuit et Sans Engagement</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-card">
+                <h3 data-i18n="cta_form_title">Demandez votre devis dès aujourd'hui !</h3>
+                <script defer data-active data-widget-type="group" data-person="f0b08853-8133-424d-a62c-7e346d54700a" src="https://wa.seo-local.click/install-widget/bundle.js?key=02f99a39-9baf-48d9-ae2c-6d0e3d32510d"></script>
+                <div data-active id="whatapp-people-widget-f0b08853-8133-424d-a62c-7e346d54700a"></div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-main">
@@ -429,7 +471,6 @@
                     <h3 data-i18n="footer_brand_title">Entreprise de Rénovation au Maroc</h3>
                     <p data-i18n="footer_brand_desc">Votre partenaire de confiance pour tous vos projets de rénovation au Maroc.</p>
                 </div>
-                <!-- ORDEN: INTÉRIEURE PRIMERO -->
                 <div class="footer-col">
                     <h4 data-i18n="nav_int">Rénovation Intérieure</h4>
                     <ul id="footer-list-int"></ul>
@@ -511,10 +552,21 @@
             nav_ext: "Rénovation Extérieure", nav_int: "Rénovation Intérieure", nav_autres: "Autres Services", nav_materiaux: "Matériaux",
             section_materiaux_title: "Matériaux de Rénovation",
             btn_devis: "Devis Gratuit", btn_call: "Appeler", menu_title: "Menu",
-            hero_title: "Rénovation au Maroc",
-            hero_desc: "Artisans qualifiés à Tetouan, Tanger, Casablanca, Marrakech et Rabat. Qualité supérieure, matériaux durables et devis gratuit.",
+            hero_title: "Rénovation au Maroc : artisans qualifiés, devis gratuit",
+            hero_desc: "Votre entreprise de rénovation au Maroc : terrasses, cuisines, salles de bains, façades, peinture, marbre et plus. Intervention rapide à Tetouan, Tanger, Casablanca, Marrakech et Rabat — devis gratuit et sans engagement.",
             hero_btn1: "Découvrir nos services", hero_btn2: "Devis WhatsApp",
             reviews_title: "Ce que disent nos clients",
+            cta_title: "Vous imaginez votre espace rénové, mais ne savez pas par où commencer ?",
+            cta_subtitle: "Laissez-nous vous guider vers la transformation parfaite.",
+            cta_b1: "Expertise Technique de Haut Niveau",
+            cta_b2: "Approche Personnalisée et Sur Mesure",
+            cta_b3: "Gestion de Projet Efficace et Transparente",
+            cta_b4: "Qualité et Durabilité Garanties",
+            cta_b5: "Design Innovant et Créatif",
+            cta_b6: "Respect des Délais et Budgets Fixés",
+            cta_b7: "Sélection Rigoureuse des Matériaux",
+            cta_b8: "Devis Gratuit et Sans Engagement",
+            cta_form_title: "Demandez votre devis dès aujourd'hui !",
             footer_brand_title: "Entreprise de Rénovation au Maroc",
             footer_brand_desc: "Votre partenaire de confiance pour tous vos projets de rénovation au Maroc.",
             footer_contact: "Contact", footer_location: "Maroc", footer_hours: "Lun-Sam: 8h-18h",
@@ -548,10 +600,21 @@
             nav_ext: "Renovación Exterior", nav_int: "Renovación Interior", nav_autres: "Otros Servicios", nav_materiaux: "Materiales",
             section_materiaux_title: "Materiales de Renovación",
             btn_devis: "Presupuesto Gratis", btn_call: "Llamar", menu_title: "Menú",
-            hero_title: "Renovación en Marruecos",
-            hero_desc: "Artesanos cualificados en Tetuán, Tánger, Casablanca, Marrakech y Rabat. Calidad superior, materiales duraderos y presupuesto gratuito.",
+            hero_title: "Renovación en Marruecos: artesanos cualificados, presupuesto gratis",
+            hero_desc: "Su empresa de renovación en Marruecos: terrazas, cocinas, baños, fachadas, pintura, mármol y más. Intervención rápida en Tetuán, Tánger, Casablanca, Marrakech y Rabat — presupuesto gratuito y sin compromiso.",
             hero_btn1: "Descubrir servicios", hero_btn2: "Presupuesto WhatsApp",
             reviews_title: "Lo que dicen nuestros clientes",
+            cta_title: "¿Se imagina su espacio renovado, pero no sabe por dónde empezar?",
+            cta_subtitle: "Déjenos guiarle hacia la transformación perfecta.",
+            cta_b1: "Experiencia Técnica de Alto Nivel",
+            cta_b2: "Enfoque Personalizado y a Medida",
+            cta_b3: "Gestión de Proyecto Eficaz y Transparente",
+            cta_b4: "Calidad y Durabilidad Garantizadas",
+            cta_b5: "Diseño Innovador y Creativo",
+            cta_b6: "Respeto de Plazos y Presupuestos",
+            cta_b7: "Selección Rigurosa de Materiales",
+            cta_b8: "Presupuesto Gratuito y Sin Compromiso",
+            cta_form_title: "¡Solicite su presupuesto hoy mismo!",
             footer_brand_title: "Empresa de Renovación en Marruecos",
             footer_brand_desc: "Tu socio de confianza para todos tus proyectos de renovación en Marruecos.",
             footer_contact: "Contacto", footer_location: "Marruecos", footer_hours: "Lun-Sáb: 8h-18h",
@@ -585,10 +648,21 @@
             nav_ext: "تجديد خارجي", nav_int: "تجديد داخلي", nav_autres: "خدمات أخرى", nav_materiaux: "مواد",
             section_materiaux_title: "مواد التجديد",
             btn_devis: "عرض أسعار مجاني", btn_call: "اتصل", menu_title: "القائمة",
-            hero_title: "التجديد في المغرب",
-            hero_desc: "حرفيون مؤهلون في تطوان، طنجة، الدار البيضاء، مراكش والرباط. جودة عالية، مواد متينة وعرض أسعار مجاني.",
+            hero_title: "التجديد في المغرب: حرفيون مؤهلون، عرض أسعار مجاني",
+            hero_desc: "شركتكم للتجديد في المغرب: تراسات، مطابخ، حمامات، واجهات، دهان، رخام وأكثر. تدخل سريع في تطوان، طنجة، الدار البيضاء، مراكش والرباط — عرض أسعار مجاني وبدون التزام.",
             hero_btn1: "اكتشف خدماتنا", hero_btn2: "واتساب",
             reviews_title: "ماذا يقول عملاؤنا",
+            cta_title: "هل تتخيل مساحتك المجددة، لكن لا تعرف من أين تبدأ؟",
+            cta_subtitle: "دعنا نرشدك نحو التحول المثالي.",
+            cta_b1: "خبرة تقنية عالية المستوى",
+            cta_b2: "نهج شخصي وحسب الطلب",
+            cta_b3: "إدارة مشروع فعالة وشفافة",
+            cta_b4: "جودة ومتانة مضمونة",
+            cta_b5: "تصميم مبتكر وخلاق",
+            cta_b6: "احترام الآجال والميزانيات",
+            cta_b7: "اختيار دقيق للمواد",
+            cta_b8: "عرض أسعار مجاني وبدون التزام",
+            cta_form_title: "اطلب عرض أسعارك اليوم!",
             footer_brand_title: "شركة تجديد في المغرب",
             footer_brand_desc: "شريكك الموثوق لجميع مشاريع التجديد في المغرب.",
             footer_contact: "اتصل", footer_location: "المغرب", footer_hours: "الإثنين-السبت: 8-18",
@@ -843,7 +917,6 @@
         });
     }
 
-    // ASISTENTE: orden nuevo -> servicio, ciudad, envergadura, y al final nombre/email/teléfono
     let chatStep = 'welcome';
     let chatData = { name: '', email: '', phone: '', service: '', city: '', scope: '' };
     let chatInitialized = false;
@@ -1095,7 +1168,7 @@
     }
 
     function setLang(lang) {
-        const flagMap = { fr: '🇫🇷', es: '🇪🇸', ar: '🇲🇦' };
+        const flagMap = { fr: '🇫🇷', es: '🇪', ar: '🇦' };
         const flag = flagMap[lang] || '🇫🇷';
         ['currentFlag', 'mobileCurrentFlag'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = flag; });
         ['currentLang', 'mobileCurrentLang'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = lang.toUpperCase(); });
@@ -1134,7 +1207,7 @@
 
     if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
         const swCode = `
-            const CACHE_NAME = 'reno-experts-v19';
+            const CACHE_NAME = 'reno-experts-v22';
             self.addEventListener('install', e => e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(['./', './index.html'])).then(() => self.skipWaiting())));
             self.addEventListener('activate', e => e.waitUntil(caches.keys().then(names => Promise.all(names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n)))).then(() => self.clients.claim())));
             self.addEventListener('fetch', e => {
